@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mesto Россия">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mesto</title>
+  
+  <!--
+    Можно лучше:
+      Лучше добавлять тег description, в будущем он может повлиять на SEO
+  -->
+  <link rel="stylesheet" href="./pages/index.css">
+</head>
+
+<body>
+  <div class="root">
+    <header class="header root__section">
+      <img src="./images/logo.svg" alt="mesto logo" class="logo">
+    </header>
+    <div class="profile root__section">
+      <div class="user-info">
+        <div class="user-info__photo"></div>
+        <div class="user-info__data">
+          <h1 class="user-info__name"></h1>
+          <p class="user-info__about"></p>
+          <button class="button button_is-tiny user-info__button-edit">Edit</button>
+        </div>
+        <button class="button button_size_is-medium user-info__button-new">+</button>
+      </div>
+    </div>
+    <div class="places-list root__section">
+
+      <!-- Пример вёрстки карточки: -->
+
+      <!--<div class="place-card">
+        <div class="place-card__image" style="background-image: url(https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg)">
+          <button class="place-card__delete-icon"></button>
+        </div>
+        <div class="place-card__description">
+          <h3 class="place-card__name">Камчатка</h3>
+          <button class="place-card__like-icon"></button>
+        </div>
+      </div>-->
+
+      <!-- конец примера. -->
+
+    </div>
+    <div class="popup" id="new">
+      <div class="popup__content">
+        <img src="./images/close.svg" alt="" class="popup__close">
+        <h3 class="popup__title">Новое место</h3>
+        <form class="popup__form" name="new">
+          <input type="text" name="name" class="popup__input popup__input_type_name" minlength="2" maxlength="30"
+            required placeholder="Название">
+          <div class="popup__error"></div>
+          <input type="url" name="link" class="popup__input popup__input_type_link-url" required
+            placeholder="Ссылка на картинку">
+          <div class="popup__error"></div>
+          <button type="submit" class="button button_size_is-medium popup__button">+</button>
+        </form>
+      </div>
+    </div>
+    <div class="popup" id="preview">
+      <div class="popup__content_preview">
+        <img src="./images/close.svg" alt="" class="popup__close">
+        <img src=" " alt="preview" class="popup__img-preview">
+        <!--
+          Можно лучше
+            Фоновое изображение можно выполнить с помощью inline свойства background-image.
+            Подробнее https://developer.mozilla.org/ru/docs/Web/CSS/background-image
+        -->
+
+      </div>
+    </div>
+    <div class="popup" id="profile">
+      <div class="popup__content">
+        <img src="./images/close.svg" alt="" class="popup__close">
+        <h3 class="popup__title">Редактировать профиль</h3>
+        <form class="popup__form" name="profile">
+          <input type="text" name="name" class="popup__input popup__input_type_name" minlength="2" maxlength="30"
+            required placeholder="Имя">
+          <div class="popup__error"></div>
+          <input type="text" name="about" class="popup__input popup__input_type_link-url" minlength="2" maxlength="30"
+            required placeholder="О себе">
+          <div class="popup__error"></div>
+          <button type="submit" class="button button_size_is-medium popup__button">Сохранить</button>
+        </form>
+      </div>
+    </div>
+    <div class="popup" id="loading">
+      <img src="./images/loading.gif" alt="loading" class="popup__loading">
+    </div>
+  </div>
+
+
+
+  <script src="js/card.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/card-list.js"></script>
+  <script src="js/popup.js"></script>
+  <script src="js/preview.js"></script>
+  <script src="js/user-info.js"></script>
+  <script src="js/toolbar.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+@import url(./_size/_is-medium/button_size_is-medium.css);
+@import url(./_size/_is-tiny/button_size_is-tiny.css);
+
+.button {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  display: block;
+  cursor: pointer;
+}
+
+.button:focus {
+  outline-color: greenyellow;
+}
