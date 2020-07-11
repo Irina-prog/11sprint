@@ -1,4 +1,13 @@
-'use strict';
+import '../styles/index.css';
+import Api from './api.js';
+import Card from './card.js';
+import CardList from './card-list.js';
+import Form from './form.js';
+import Popup from './popup.js';
+import Preview from './preview.js';
+import Toolbar from './toolbar.js';
+import UserInfo from './user-info.js';
+
 const options = {
   url: 'https://praktikum.tk',
   userId: 'cohort11',
@@ -55,8 +64,8 @@ const getErrorView = input => input.nextElementSibling;
 
  const newCardForm = new Form(cardData => {
   api.createCard(cardData)
-  .then(()=>{
-    list.addCard(cardData);
+  .then((newCardData)=>{
+    list.addCard(newCardData);
     newCardForm.reset();
     newCardPopup.close();
   })
