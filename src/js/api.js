@@ -1,6 +1,4 @@
-'use strict';
-
-class Api{
+export default class Api{
     constructor({url, userId, accessToken}){
         this._url = url;
         this._accessToken = accessToken;

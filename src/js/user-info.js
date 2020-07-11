@@ -1,7 +1,5 @@
 //отвечает за отображение информации профиля
-'use strict';
-
-class UserInfo{
+export default class UserInfo{
     setUserInfo({name, about}){
         this._name = name;
         this._about = about;

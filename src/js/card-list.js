@@ -1,7 +1,5 @@
 // отвечает за отображение списка
-'use strict';
-
-class CardList {
+export default class CardList {
     constructor (createCardView) {
         this._createCardView = createCardView; // вызывается для отображения одного элемента списка
     }

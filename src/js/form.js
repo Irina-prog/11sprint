@@ -1,7 +1,5 @@
 // отвечает за форму ввода с валидацией введёных данных
-'use strict';
-
-class Form {
+export default class Form {
     constructor(onSubmit, getErrorViewForInput) {
         this._onSubmit = onSubmit;
         this._getErrorViewForInput = getErrorViewForInput;

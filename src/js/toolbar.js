@@ -1,6 +1,5 @@
 // отвечает за привязку обработчиков к кнопкам "Создать карточку" и "Редактировать провиль"
-'use strict';
-class Toolbar {
+export default class Toolbar {
     constructor(newCard, editProfile) {
         this._newCard = newCard;
         this._editProfile = editProfile;

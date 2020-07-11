@@ -1,6 +1,5 @@
 //отвечает за отображение одной карточки
-'use strict';
-class Card {
+export default class Card {
     constructor ({_id, name, owner, link, likes}, options){
         this._id = _id;
         this._name = name;
