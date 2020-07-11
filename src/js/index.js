@@ -1,3 +1,4 @@
+import '../styles/index.css';
 import Api from './api.js';
 import Card from './card.js';
 import CardList from './card-list.js';
@@ -63,8 +64,8 @@ const getErrorView = input => input.nextElementSibling;
 
  const newCardForm = new Form(cardData => {
   api.createCard(cardData)
-  .then(()=>{
-    list.addCard(cardData);
+  .then((newCardData)=>{
+    list.addCard(newCardData);
     newCardForm.reset();
     newCardPopup.close();
   })

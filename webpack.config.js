@@ -60,7 +60,7 @@ module.exports = {
       assetNameRegExp: /\.css$/g,
       cssProcessor: require('cssnano'),
       cssProcessorPluginOptions: {
-              preset: ['default'],
+         preset: ['default'],
       },
       canPrint: true
     }), // подключите плагин после MiniCssExtractPlugin
