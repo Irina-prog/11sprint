@@ -9,7 +9,7 @@ import Toolbar from './toolbar.js';
 import UserInfo from './user-info.js';
 
 const options = {
-  url: 'https://praktikum.tk',
+  url: `http${NODE_ENV === 'production' ? 's' : ''}://praktikum.tk`,
   userId: 'cohort11',
   accessToken: '6de8ebff-243e-4e71-93d3-1e76dbdec241'
 };
