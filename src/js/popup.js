@@ -1,6 +1,5 @@
 //отвечает за отображение всплывающего окна
-'use strict';
-class Popup {
+export default class Popup {
     constructor(renderChildView){
         this._renderChildView = renderChildView;
     }
